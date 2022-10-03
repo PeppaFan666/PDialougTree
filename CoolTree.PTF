@@ -1,0 +1,50 @@
+[{from:Dialouge, from_port:0, to:Choice, to_port:0}, {from:Choice, from_port:0, to:@Dialouge@87, to_port:0}, {from:@Dialouge@87, from_port:0, to:@Dialouge@47, to_port:0}, {from:Choice, from_port:1, to:@Dialouge@95, to_port:0}, {from:@Dialouge@95, from_port:0, to:@Choice@63, to_port:0}, {from:@Choice@63, from_port:0, to:@Dialouge@71, to_port:0}, {from:@Choice@63, from_port:1, to:@Dialouge@79, to_port:0}]
+[BEGINNODES]
+DialougeNode:[
+	Offset: (40, 40),
+	Name:        Dialouge-0,
+	Data:        first this
+]
+[NEXTNODE]
+ChoiceNode:[
+	Offset: (240, 60),
+	Name:        Choice-3,
+	Data: [choice 1[NEXTDATA]choice 2[NEXTDATA]]
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (740, 60),
+	Name:     Dialouge-5,
+	Data:     more for 1
+]
+[NEXTNODE]
+ChoiceNode:[
+	Offset: (600, 200),
+	Name:   Choice-7,
+	Data: [yes[NEXTDATA]no[NEXTDATA]]
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (860, 160),
+	Name:   Dialouge-6,
+	Data:   you picked yes
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (840, 240),
+	Name:   Dialouge-8,
+	Data:   you picked no
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (520, 20),
+	Name:        Dialouge-2,
+	Data:        you picked one
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (400, 200),
+	Name:        Dialouge-1,
+	Data:        you picked two
+]
+[NEXTNODE]
