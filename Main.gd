@@ -60,30 +60,62 @@ func _on_Button3_pressed():
 	pair.append($GraphEdit.get_node(final["to"]))
 	#pair.append(final["to"])
 	#pair.append(final["to"])
-	list.append(pair)
+	#list.append(pair)
 	
 	list = sort_list(list)
-	
-	var branches = []
-	var end = FileWrapper.new()
-	for l in list:
-		if l == null:
-			continue
-		if l[0].type == 0:
-			file.store_string("<Dialouge>" + str(l[0].get_data()))
-			end.store_string("</Dialouge>")
-		elif l[0].type == 1:
-			pass
-	file.store_string(end.text)
+	file.store_string("<Main>")
+	write(file,list)
+	file.store_string("</Main>")
 	
 	for block in blocks:
 		file.store_string(block.text)
 	file.close()
 	#write($GraphEdit.get_child(safeindex),file)
 
+func get_branch(list,start):
+	var res = []
+	if start >= len(list):
+		return []
+	var last = list[start]
+	#res.append(last)
+	for i in range(start,len(list)):
+		if list[i] == null or list[i][0] != last[1]:
+			break
+		res.append(list[i])
+		last = list[i]
+	if len(res) ==0:
+		res.append([list[start][1],list[start][1]])
+	return res
 
-
-
+func write(file,list):
+	var branches = []
+	var end = FileWrapper.new()
+	var skipto = -1
+	for i in range(len(list)):
+		if i < skipto:
+			continue
+		var l = list[i]
+		if l == null:
+			continue
+		if l[0].type == 0:
+			file.store_string("<Dialouge>" + str(l[0].get_data()))
+			end.store_string("</Dialouge>")
+		elif l[0].type == 1:
+			for j in l[0].get_choices():
+				file.store_string("<Choice>" + j + "</Choice>")
+			file.store_string(end.text)
+			end = FileWrapper.new()
+			var readind = i
+			for j in l[0].get_choices():
+				file.store_string("<Choice id = \"" + j + "\">")
+				var branch = get_branch(list,readind)
+				readind += len(branch)
+				write(file,branch)
+				file.store_string("</Choice>")
+			skipto = readind
+	#if len(list) == 1:
+		#file.store_string(list[len(list)-1][1].get_data())
+	file.store_string(end.text)
 
 func _on_GraphEdit_disconnection_request(from, from_slot, to, to_slot):
 	$GraphEdit.disconnect_node(from,from_slot,to,to_slot)

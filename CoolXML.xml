@@ -1,1 +1,1 @@
-<Dialouge>1<Dialouge>2<Dialouge>3</Dialouge></Dialouge></Dialouge>
+<Main><Dialouge>   1<Dialouge>   2<Dialouge>   3<Choice>on</Choice><Choice>twi</Choice><Choice>tre</Choice></Dialouge></Dialouge></Dialouge><Choice id = "on"><Dialouge>  two</Dialouge></Choice><Choice id = "twi"><Dialouge> please</Dialouge></Choice><Choice id = "tre"></Choice></Main>
