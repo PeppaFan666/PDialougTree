@@ -39,7 +39,6 @@ custom_colors/grid_major = Color( 0.498039, 0.454902, 0.686275, 1 )
 custom_colors/grid_minor = Color( 0.360784, 0.278431, 0.498039, 1 )
 custom_styles/bg = SubResource( 3 )
 right_disconnects = true
-scroll_offset = Vector2( -40, -200 )
 
 [node name="Export" type="FileDialog" parent="."]
 margin_right = 315.0

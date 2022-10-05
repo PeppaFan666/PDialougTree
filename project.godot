@@ -35,6 +35,7 @@ _global_script_class_icons={
 config/name="DialougTree"
 run/main_scene="res://Control.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://logo.ico"
 
 [gui]
 
