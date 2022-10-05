@@ -1,38 +1,79 @@
-[{from:Dialouge, from_port:0, to:@Dialouge@32, to_port:0}, {from:@Dialouge@32, from_port:0, to:@Dialouge@63, to_port:0}, {from:@Dialouge@63, from_port:0, to:Choice, to_port:0}, {from:Choice, from_port:0, to:@Dialouge@71, to_port:0}, {from:Choice, from_port:1, to:@Dialouge@79, to_port:0}]
+[[from:3161026589, from_port:0, to:2668139190, to_port:0], [from:2668139190, from_port:1, to:4134715227, to_port:0], [from:2668139190, from_port:0, to:4204663500, to_port:0], [from:1099556929, from_port:0, to:3154986942, to_port:0], [from:4204663500, from_port:0, to:1099556929, to_port:0], [from:4134715227, from_port:0, to:1519752278, to_port:0], [from:1519752278, from_port:0, to:1353875733, to_port:0], [from:3154986942, from_port:0, to:1798784612, to_port:0], [from:1353875733, from_port:0, to:3960688578, to_port:0], [from:1798784612, from_port:0, to:546127059, to_port:0]]
 [BEGINNODES]
 DialougeNode:[
 	Offset: (40, 40),
-	Name:   Dialouge-0,
-	Data:   1
-]
-[NEXTNODE]
-DialougeNode:[
-	Offset: (220, 120),
-	Name:   Dialouge-1,
-	Data:   2
+	Name:        Dialouge-0,
+	ID: 3161026589,
+	Data:        dd
 ]
 [NEXTNODE]
 ChoiceNode:[
-	Offset: (640, 80),
-	Name:   Choice-3,
-	Data: [on[NEXTDATA]twi[NEXTDATA]tre[NEXTDATA]]
+	Offset: (280, 80),
+	Name:        Choice-1,
+	ID: 2668139190,
+	Data: [a[NEXTDATA]d[NEXTDATA]]
 ]
 [NEXTNODE]
 DialougeNode:[
-	Offset: (400, 140),
-	Name:   Dialouge-2,
-	Data:   3
+	Offset: (120, 240),
+	Name:       Dialouge-4,
+	ID: 4134715227,
+	Data:       test
 ]
 [NEXTNODE]
 DialougeNode:[
-	Offset: (820, 60),
-	Name:  Dialouge-5,
-	Data:  two
+	Offset: (500, 160),
+	Name:        Dialouge-2,
+	ID: 4204663500,
+	Data:        c
 ]
 [NEXTNODE]
 DialougeNode:[
-	Offset: (820, 180),
-	Name: Dialouge-6,
-	Data: please
+	Offset: (740, 100),
+	Name:      Dialouge-6,
+	ID: 1099556929,
+	Data:      lbozo
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (520, 320),
+	Name:      Dialouge-5,
+	ID: 3154986942,
+	Data:      checkmate
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (320, 360),
+	Name:     Dialouge-8,
+	ID: 1519752278,
+	Data:     jk
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (240, 440),
+	Name:     Dialouge-7,
+	ID: 1353875733,
+	Data:     dfdfdsf
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (740, 260),
+	Name:    Dialouge-9,
+	ID: 3960688578,
+	Data:    mmmm
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (520, 460),
+	Name:    Dialouge-10,
+	ID: 1798784612,
+	Data:    nnnn
+]
+[NEXTNODE]
+DialougeNode:[
+	Offset: (700, 420),
+	Name:  Dialouge-11,
+	ID: 546127059,
+	Data:  ll
 ]
 [NEXTNODE]

@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=9 format=2]
+
+[ext_resource path="res://ChivoMono-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.733333, 0.733333, 0.733333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.360784, 0.360784, 0.360784, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+
+[sub_resource type="DynamicFont" id=6]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+
+[sub_resource type="StyleBoxFlat" id=12]
+
+[resource]
+default_font = SubResource( 6 )
+Button/styles/disabled = SubResource( 10 )
+Button/styles/hover = SubResource( 11 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 9 )
+FileDialog/colors/file_icon_modulate = Color( 1, 1, 1, 1 )
+FileDialog/colors/files_disabled = Color( 1, 1, 1, 0.25 )
+FileDialog/colors/folder_icon_modulate = Color( 1, 1, 1, 1 )
+FileDialog/icons/file = null
+FileDialog/icons/folder = null
+FileDialog/icons/parent_folder = null
+FileDialog/icons/reload = null
+FileDialog/icons/toggle_hidden = null
+Label/fonts/font = SubResource( 6 )
+Label/styles/normal = SubResource( 13 )
+MenuButton/fonts/font = SubResource( 6 )
+PopupDialog/styles/panel = SubResource( 12 )

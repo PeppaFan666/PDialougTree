@@ -6,10 +6,20 @@ extends GraphNode
 # var b = "text"
 var type = 1
 var ind = 1
+var id
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_slot(0,true,0,Color(0.262745, 0.141176, 0.764706),false,0,Color(0.262745, 0.141176, 0.764706))
+	id = randi()
+	while not uniqueID():
+		id = randi()
 	add_to_group("Saveables")
+
+func uniqueID() -> bool:
+	for node in get_tree().get_nodes_in_group("Saveables"):
+		if node.id == id:
+			return false
+	return true
 
 func set_data(input):
 	for i in range(len(input)-1):
